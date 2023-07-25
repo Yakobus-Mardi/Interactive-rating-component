@@ -1,0 +1,167 @@
+:root {
+  /* === Colors === */
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  height: 100vh;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+section {
+  margin-block: 12px;
+}
+
+img {
+  display: block;
+  /* max-width: 100%; */
+}
+
+ul li {
+  color: var(--medium-grey);
+  list-style-type: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.container {
+  background-color: var(--dark-blue);
+  width: min(40ch, 100% - 4rem);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.text-paragraph {
+  color: var(--medium-grey);
+  /* margin: 10px 0 0 0; */
+}
+
+.rating-component {
+  position: relative;
+}
+
+.rating-component ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.bg-circle {
+  background-color: hsla(216, 12%, 8%, 0.3);
+  padding: 25px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--orange);
+  padding: 15px 0;
+  border-radius: 30px;
+  color: var(--white);
+}
+
+.rate-again {
+  background: none;
+  color: hsl(217deg 12% 63% / 0.3);
+  /* margin-top: 15px; */
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* Thank you state */
+
+.thank-you-state {
+  text-align: center;
+}
+
+.thank-you-state header > img {
+  margin: 0 auto 15px;
+}
+
+.rating-given {
+  color: var(--orange);
+  display: inline-block;
+  background-color: hsla(216, 12%, 8%, 0.3);
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.overlay {
+  position: absolute;
+  background-color: hsla(216, 12%, 8%);
+  width: 100%;
+  padding: 15px 0;
+  border: 1px red solid;
+  border-radius: 30px;
+}
+
+.overlay p {
+  text-align: center;
+  color: #7c8798;
+}
+
+.selected {
+  background-color: #7c8798;
+  color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
